@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma Modal!</title>
+    <link rel="stylesheet" href="./css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/modal-fx.min.css">
+
+</head>
+<body>  
+    <section class="section">
+        <div>
+            <button class="button is-primary is-medium modal-button" data-target="modal-content">Show Modal</button>
+        </div>
+    </section>
+    <section class="section">
+        <div id="modal-content" class="modal modal-normal modal-fx-fadeInScale">
+            <div class="modal-content modal-card box">
+                <header class="modal-card-head is-paddingless ligtgray-border">
+                    <div><p class="modal-card-title has-text-weight-bold">Add Seperation Note</p></div>
+                    <div class="ml-auto is-rounded ligtgray-border is-inline-flex mtb pd-8">
+                        <i class="icon-calendar-empty has-text-blue"></i>
+                        <p class="modal-card-time has-text-weight-medium"><span>13 Dec 2019</span> - <span>10:34 pm</span></p>
+                    </div>
+                </header>
+                <section class="modal-card-body">
+                    <div class="note-list">
+                        <div class="note-list-item columns">
+                            <div class="status-select column is-paddingless">
+                                <div class="dropdown column is-paddingless">
+                                    <div class="dropdown-trigger has-text-weight-medium">
+                                        <label class="has-text-grey">Research Status</label>
+                                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                            <span class="has-text-weight-medium">Onsite Research</span>
+                                            <span class="icon is-small">
+                                                <i class="icon-chevron-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                                        <div class="dropdown-content">
+                                            <a href="#" class="dropdown-item">
+                                                Dropdown item
+                                            </a>
+                                            <a class="dropdown-item">
+                                                Dropdown item
+                                            </a>
+                                            <a href="#" class="dropdown-item is-active">
+                                                Dropdown item
+                                            </a>
+                                            <a href="#" class="dropdown-item">
+                                                Dropdown item
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="note-list-item-opt">
+                                <button class="button is-paddingless ml-auto"><i class="icon-minus-sign"></i></button>
+                            </div>
+                        </div>
+                        <div class="note-list-item columns">
+                            <div class="status-select column is-paddingless">
+                                <div class="dropdown column is-paddingless">
+                                    <div class="dropdown-trigger has-text-weight-medium">
+                                        <label class="has-text-grey">Research Status</label>
+                                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu-2">
+                                            <span class="has-text-weight-medium">Onsite Research</span>
+                                            <span class="icon is-small">
+                                                <i class="icon-chevron-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="dropdown-menu" id="dropdown-menu-2" role="menu">
+                                        <div class="dropdown-content">
+                                            <a href="#" class="dropdown-item">
+                                                Dropdown item
+                                            </a>
+                                            <a class="dropdown-item">
+                                                Dropdown item
+                                            </a>
+                                            <a href="#" class="dropdown-item is-active">
+                                                Dropdown item
+                                            </a>
+                                            <a href="#" class="dropdown-item">
+                                                Dropdown item
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="note-list-item-opt">
+                                <button class="button is-paddingless ml-auto"><i class="icon-minus-sign"></i></button>
+                            </div>
+                        </div>
+                        <div class="note-list-item new-list-item has-text-blue dash-border">
+                            <div class="status-select column is-paddingless">
+                                <div class="dropdown column is-paddingless">
+                                    <div class="dropdown-trigger has-text-weight-medium">
+                                        <button class="button has-background-white" aria-haspopup="true" aria-controls="dropdown-menu-new">
+                                            <span class="has-text-weight-medium has-text-blue">Add New Line</span>
+                                            <span class="icon is-small">
+                                                <i class="icon-chevron-down has-text-blue" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="dropdown-menu" id="dropdown-menu-new" role="menu">
+                                        <div class="dropdown-content">
+                                            <a href="#" class="dropdown-item">
+                                                Dropdown item
+                                            </a>
+                                            <a class="dropdown-item">
+                                                Dropdown item
+                                            </a>
+                                            <a href="#" class="dropdown-item is-active">
+                                                Dropdown item
+                                            </a>
+                                            <a href="#" class="dropdown-item">
+                                                Dropdown item
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="modal-button-close button has-text-grey-light">Cancel</button>
+                    <button class="modal-button-close button is-success">Add Status</button>
+                </footer>
+            </div>
+        </div>
+    </section>
+    <script src="./js/modal-fx.min.js"></script>
+    <script>
+       //DOMContentLoaded - it fires when initial HTML document has been completely loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.dropdown').forEach(item => {
+                item.addEventListener('click', event => {
+                    event.stopPropagation();
+                    item.classList.toggle('is-active');
+                })
+            })
+       });        
+    </script>
+</body>
+</html>

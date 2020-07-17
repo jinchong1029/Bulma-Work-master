@@ -1,0 +1,147 @@
+.icon-flag {
+	color: #0282ff;
+	font-size: 25px;
+}
+.icon-flag-alt {
+	font-size: 25px;
+}
+.dropdown-trigger {
+	.button {
+		background-color: transparent;
+		border: none;
+		box-shadow: none;
+	}
+}
+.button {
+	&:active {
+		background-color: transparent;
+		border: none;
+		box-shadow: none;
+	}
+	&:focus {
+		&:not(:active) {
+			background-color: transparent;
+			border: none;
+			box-shadow: none;
+		}
+	}
+}
+.button.is-active {
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+}
+.button.is-focused {
+	&:not(:active) {
+		background-color: transparent;
+		border: none;
+		box-shadow: none;
+	}
+}
+.dropdown {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.dropdown-menu {
+	>.dropdown-content {
+		margin-bottom: -44px;
+		border-radius: 4px;
+		width: 30rem;
+	}
+}
+.ptb-16 {
+	padding: 1rem 0;
+}
+.mlr-16 {
+	margin: 0 1rem;
+}
+.note-header {
+	border-bottom: 1px solid lightgrey;
+	.note-header-title {
+		font-size: 1.2rem;
+	}
+	.note-header-time {
+		float: right;
+		font-size: 1rem;
+		.icon {
+			font-size: 1.5rem;
+			color: #0282ff;
+			margin-right: 0.5rem;
+		}
+	}
+}
+.note-body {
+	.status-items {
+		.status-item {
+			margin-bottom: 0.5rem;
+			margin-right: 0.5rem;
+			border-radius: 50px;
+			span {
+				padding: 0.5rem 1rem;
+				font-size: 1rem;
+			}
+		}
+	}
+}
+.status-item {
+	.is-rounded {
+		border-radius: 50px;
+	}
+}
+.status-note {
+	label {
+		text-transform: uppercase;
+		font-size: 1rem;
+	}
+	div {
+		border-left: 3px solid lightgray;
+		padding-left: 0.75rem;
+	}
+}
+.note-footer {
+	height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	.icon-flag-alt {
+		padding: 9px;
+		border-top-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+		background-color: #0282ff;
+		height: 100%;
+	}
+}
+@media (max-width: 640px) and (min-width: 550px) {
+	.dropdown-menu {
+		.dropdown-content {
+			width: 25rem;
+		}
+	}
+}
+@media (max-width: 550px) and (min-width: 470px) {
+	.dropdown-menu {
+		.dropdown-content {
+			width: 20rem;
+		}
+	}
+	.note-header {
+		display: inline-block;
+		.note-header-time {
+			float: left;
+		}
+	}
+}
+@media (max-width: 470px) {
+	.dropdown-menu {
+		.dropdown-content {
+			width: 15rem;
+		}
+	}
+	.note-header {
+		display: inline-block;
+		.note-header-time {
+			float: left;
+		}
+	}
+}

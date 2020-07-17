@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="./css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/hover.css">
+</head>
+
+<body>
+    <section class="section" style="height: 100vh;">
+        <div class="container" style="height: 100%;">
+            <div class="dropdown is-hoverable is-up is-right">
+                <div class="dropdown-trigger">
+                    <button class="button is-paddingless" aria-haspopup="true" aria-controls="dropdown-menu1">
+                        <i class="icon-flag"></i>
+                    </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu1" role="menu">
+                    <div class="dropdown-content box is-paddingless">
+                        <div class="dropdown-item note is-paddingless">
+                            <div class="note-header ptb-16 mlr-16  ">
+                                <div class="note-header-title has-text-weight-bold is-inline-flex">
+                                    <span>Speration Note</span>
+                                </div>
+                                <div class="note-header-time is-inline-flex">
+                                    <span class="icon"><i class="icon-calendar-empty has-text-blue"></i></span>
+                                    <span class="time">
+                                        <span>13 Dec 2019</span> - <span>10:34pm</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="note-body ptb-16 mlr-16">
+                                <div class="status-items">
+                                    <div class="status-item is-inline-flex has-text-gray"><span class="is-inline-block has-text-weight-medium has-background-grey-light is-rounded">Known Issue: Warehouse</span></div>
+                                    <div class="status-item is-inline-flex has-text-gray is-rounded"><span class="is-inline-block has-text-weight-medium has-background-grey-light is-rounded">Action Owner: FEDEX</span></div>
+                                    <div class="status-item is-inline-flex has-text-gray"><span class="is-inline-block has-text-weight-medium has-background-grey-light is-rounded">Shipment Status: Ready for delivery</span></div>
+                                </div>
+                                <div class="status-note has-text-grey">
+                                    <label>NOTE</label>
+                                    <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor eu velit at laoreet. Sed fermentum posuere nunc, maximus sagittis libero aliquet quis. </p></div>
+                                </div>
+                            </div>
+                            <div class="note-footer">
+                                <i class="icon-flag-alt has-text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+       //DOMContentLoaded - it fires when initial HTML document has been completely loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            var dropdown = document.querySelector('.dropdown');
+                dropdown.addEventListener('hover', function(event) {
+                event.stopPropagation();
+                dropdown.classList.toggle('is-active');
+           });
+       });        
+    </script>
+</body>
+
+</html>
